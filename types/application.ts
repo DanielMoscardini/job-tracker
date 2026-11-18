@@ -13,3 +13,10 @@ export type Application = {
   createdAt: string;
   updatedAt: string;
 };
+
+export type NewApplication = Omit<
+  Application,
+  "id" | "createdAt" | "updatedAt"
+>;
+
+export type UpdateApplication = Partial<NewApplication>;
